@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300");
 html {
-  --header-color: rgb(28, 28, 47);
+  --header-color: rgb(39, 39, 71);
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -34,19 +34,19 @@ header {
   font-size: 2.5rem;
   grid-area: "header";
   background-color: var(--header-color);
-  color: white;
+  color: rgb(247, 203, 114);
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 
 header a {
-  color: white;
+  color: rgb(247, 203, 114);
   text-decoration: none;
 }
 
 a:hover {
-  color: orangered;
+  color: rgb(231, 178, 74);
   cursor: pointer;
 }
 
@@ -100,6 +100,7 @@ footer {
   justify-content: space-between;
   height: 100%;
   margin: 2rem;
+  background-color: white;
 }
 
 .product img {
