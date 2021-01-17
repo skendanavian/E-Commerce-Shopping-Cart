@@ -13,16 +13,35 @@ class App extends React.Component {
     };
   }
   sortProducts = (event) => {
-    console.log(event.target.value);
+    const sort = event.target.value;
+
+    this.setState((state) => ({
+      sort: sort,
+      products: this.state.products
+        .slice()
+        .sort((a, b) =>
+          sort === "lowest"
+            ? a.price - b.price
+            : sort === "highest"
+            ? b.price - a.price
+            : b._id < a._id
+            ? 1
+            : -1
+        ),
+    }));
   };
+
   filterProducts = (event) => {
     if (event.target.value === "") {
-      this.setState({ size: event.target.value, products: data.products });
+      this.setState({
+        size: event.target.value,
+        products: data.products,
+      });
     } else {
       this.setState({
         size: event.target.value,
         products: data.products.filter(
-          (product) => product.availableSizes.indexOf(event.target.value) > 0
+          (product) => product.availableSizes.indexOf(event.target.value) >= 0
         ),
       });
     }
