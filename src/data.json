@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "_id": "snowboard1",
+      "title": "Powder King",
+      "image": "./images/snowboard1.jpg",
+      "description": "Long board for all your deep powder shredding needs",
+      "availableSizes": ["M", "L", "XL"],
+      "price": 350
+    },
+    {
+      "_id": "snowboard2",
+      "title": "The All Mountain",
+      "image": "./images/snowboard2.jpg",
+      "description": "The swiss army knife for the entire mountain.",
+      "availableSizes": ["M", "L", "XL"],
+      "price": 350
+    },
+    {
+      "_id": "snowboard3",
+      "title": "Flex Magnet",
+      "image": "./images/snowboard3.jpg",
+      "description": "Jib it up in those buttery rails",
+      "availableSizes": ["M", "L", "XL"],
+      "price": 350
+    },
+    {
+      "_id": "snowboard4",
+      "title": "The ripper",
+      "image": "./images/snowboard4.jpg",
+      "description": "Aggressive deep camber ride to get you to the bottom as fast as possible",
+      "availableSizes": ["M", "L", "XL"],
+      "price": 350
+    },
+    {
+      "_id": "snowboard5",
+      "title": "The Apprentice",
+      "image": "./images/snowboard5.jpg",
+      "description": "An all around board for the younger riders",
+      "availableSizes": ["XS", "S", "M"],
+      "price": 350
+    },
+    {
+      "_id": "snowboard6",
+      "title": "The Banana Boat ",
+      "image": "./images/snowboard6.jpg",
+      "description": "Full Rocker tip to tail for a surfy feel and float",
+      "availableSizes": ["M", "L", "XL"],
+      "price": 350
+    }
+  ]
+}
