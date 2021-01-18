@@ -28,8 +28,6 @@ class App extends React.Component {
 
     cartItems.forEach((item) => {
       if (item._id === product._id) {
-        console.log("pushed");
-
         item.count++;
         alreadyInCart = true;
       }
