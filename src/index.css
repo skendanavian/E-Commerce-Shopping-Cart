@@ -17,7 +17,6 @@ select,
 button,
 textarea {
   font-family: "Open Sans", Sans-Serif;
-
   font-size: 1.6rem;
 }
 
@@ -102,6 +101,8 @@ footer {
   margin: 2rem;
   background-color: white;
   border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.1rem 0.2rem rgba(0, 0, 0, 0.23);
   padding: 1rem;
 }
 
@@ -131,8 +132,11 @@ footer {
 }
 
 button {
-  padding: 0.7rem;
+  padding: 0.5rem;
   border: 0.1rem #c0c0c0 solid;
+
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
 }
 
 button:hover {
