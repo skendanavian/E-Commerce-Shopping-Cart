@@ -142,7 +142,6 @@ button {
 button:hover {
   cursor: pointer;
   border: 0.1rem #888 solid;
-  background-color: #e7c159;
 }
 
 .button-primary {
