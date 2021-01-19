@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300");
 html {
-  --header-color: #16223b;
+  --header-color: rgb(25, 25, 25);
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -30,6 +30,7 @@ textarea {
 
 header {
   font-family: "Work Sans", Sans-Serif;
+  width: 100%;
   grid-area: "header";
   background-color: var(--header-color);
   display: flex;
@@ -39,14 +40,16 @@ header {
 }
 
 header a {
-  color: #f0c040;
-  font-weight: 600;
-  font-size: 2.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-weight: 300;
+  font-size: 2.2rem;
 
   text-decoration: none;
 }
 
 header img {
+  background-color: rgb(30, 168, 77);
   margin-right: 0.5rem;
   width: 5rem;
   height: 2.2rem;
@@ -107,9 +110,9 @@ footer {
   height: 100%;
   margin: 2rem;
   background-color: white;
-  border: 0.1rem solid black;
+  /* border: 0.1rem solid #c0c0c0; */
   border-radius: 0.5rem;
-  box-shadow: 0rem 0.1rem 0.2rem rgba(0, 0, 0, 0.23);
+  box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.189);
   padding: 1rem;
 }
 
@@ -122,6 +125,15 @@ footer {
 .product p {
   text-align: center;
 }
+.product a {
+  /* text-decoration: none; */
+  color: black;
+}
+
+.product a:hover {
+  transform: scale(1.008);
+  color: rgba(0, 0, 0, 0.846);
+}
 
 .product-price {
   display: flex;
@@ -130,6 +142,7 @@ footer {
 }
 
 .product-price button {
+  max-width: 9rem;
   text-align: center;
 }
 
@@ -140,18 +153,26 @@ footer {
 
 button {
   padding: 0.7rem;
-  border: 0.1rem #c0c0c0 solid;
+  border: none;
+  /* border: 0.1rem #c0c0c0 solid; */
   border-radius: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 button:hover {
   cursor: pointer;
-  border: 0.1rem #888 solid;
+  opacity: 0.9;
+  /* border: 0.1rem #888 solid; */
 }
 
 .button-primary {
-  background-color: #f0c040;
+  /* background-color: #f0c040; */
+  background-color: rgb(30, 168, 77);
+  color: white;
+}
+
+#root > div > main > div > div.main > div:nth-child(2) > ul {
+  border-right: 0.1rem solid #c0c0c0;
 }
 
 /* Filter Component */
@@ -160,8 +181,10 @@ button:hover {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  margin: 1rem;
+  /* margin: 1rem; */
+  background-color: rgb(246, 246, 246);
   border-bottom: 0.1rem #c0c0c0 solid;
+  border-right: 0.1rem #c0c0c0 solid;
 }
 
 .filter div {
@@ -170,6 +193,10 @@ button:hover {
 
 /* Index.css */
 
+.sidebar {
+  /* border-left: 0.1rem solid #c0c0c0; */
+}
+
 .cart {
   padding: 1.2rem;
   margin: 1rem;
@@ -177,7 +204,11 @@ button:hover {
 }
 
 .cart-header {
-  border-bottom: 0.1rem #c0c0c0 solid;
+  /* border-bottom: 0.1rem #c0c0c0 solid; */
+  /* background-color: rgb(246, 246, 246); */
+  margin: 0;
+  text-align: center;
+  justify-content: center;
 }
 
 .cart-items {

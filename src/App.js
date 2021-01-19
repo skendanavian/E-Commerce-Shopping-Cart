@@ -90,7 +90,7 @@ class App extends React.Component {
         <header>
           <a href="/">
             <img src={mountain} alt="mountain"></img>
-            Mountain Zone
+            React Mountain Outfitters
           </a>
         </header>
         <main>
