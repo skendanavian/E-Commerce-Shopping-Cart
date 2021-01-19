@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300");
 html {
-  --header-color: rgb(39, 39, 71);
+  --header-color: #16223b;
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -35,17 +35,24 @@ header {
   display: flex;
   align-items: center;
   padding: 0.8rem;
+  border-bottom: 0.1rem solid #c0c0c0;
 }
 
 header a {
-  color: rgb(255, 255, 255);
-  font-size: 2.3rem;
+  color: #f0c040;
+  font-weight: 600;
+  font-size: 2.5rem;
 
   text-decoration: none;
 }
 
+header img {
+  margin-right: 0.5rem;
+  width: 5rem;
+  height: 2.2rem;
+}
+
 a:hover {
-  color: rgb(231, 178, 74);
   cursor: pointer;
 }
 
@@ -132,7 +139,7 @@ footer {
 }
 
 button {
-  padding: 0.8rem;
+  padding: 0.7rem;
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
   font-size: 1.4rem;

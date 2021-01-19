@@ -3,6 +3,7 @@ import Filter from "./components/Filter";
 import Products from "./components/Products";
 import Cart from "./components/Cart";
 import data from "./data.json";
+import mountain from "./images/mountain.png";
 
 class App extends React.Component {
   constructor() {
@@ -87,7 +88,10 @@ class App extends React.Component {
     return (
       <div className="grid-container">
         <header>
-          <a href="/">The Snow Shack</a>
+          <a href="/">
+            <img src={mountain} alt="mountain"></img>
+            Mountain Zone
+          </a>
         </header>
         <main>
           <div className="content">
