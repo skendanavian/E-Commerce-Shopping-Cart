@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
-export default class Filter extends Component {
+import { connect } from "react-redux";
+import { filterProducts, sortProducts } from "../actions/productActions";
+class Filter extends Component {
   render() {
     return (
       <div className="filter">
@@ -29,3 +30,16 @@ export default class Filter extends Component {
     );
   }
 }
+
+export default connect(
+  (state) => ({
+    size: state.products.size,
+    sort: state.products.sort,
+    products: state.products.items,
+    filterProducts: state.products.filteredItems,
+  }),
+  {
+    filterProducts,
+    sortProducts,
+  }
+)(Filter);
