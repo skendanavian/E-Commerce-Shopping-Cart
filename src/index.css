@@ -24,7 +24,7 @@ textarea {
   height: 100%;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 6rem 1fr 6rem;
   grid-template-columns: 1fr;
 }
 
@@ -68,8 +68,23 @@ footer {
   background-color: var(--header-color);
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+footer > div {
+  color: white;
+  text-decoration: none;
+  padding: 0.2rem;
+}
+
+footer > div:nth-child(1) > a {
+  color: lightgray;
+}
+footer > div:nth-child(1) > a:hover {
+  color: grey;
+  cursor: pointer;
 }
 
 .content {
@@ -326,4 +341,27 @@ input {
 }
 .success-message {
   color: green;
+}
+
+/* ORDERS */
+
+.orders {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+td {
+  padding: 1rem;
+}
+
+th {
+  text-align: left;
 }
