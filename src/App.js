@@ -14,8 +14,7 @@ class App extends React.Component {
           <div className="grid-container">
             <header>
               <Link to="/">
-                <img src={mountain} alt="mountain"></img>
-                React Mountain Outfitters
+                <img src={mountain} alt="mountain"></img> React Mountain Sports
               </Link>
             </header>
             <main>

@@ -1,24 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { filterProducts, sortProducts } from "../actions/productActions";
+import BeatLoader from "react-spinners/BeatLoader";
+
 class Filter extends Component {
   render() {
     return !this.props.filteredProducts ? (
-      <div>Loading...</div>
+      <div className="loader">
+        {" "}
+        <BeatLoader size={15} margin={5} color={"green"} loading={true} />
+      </div>
     ) : (
       <div className="filter">
         <div className="filter-result">
           {this.props.filteredProducts.length} Products
         </div>
         <div className="filter-sort">
-          {/* Order{" "} */}
+          Order{" "}
           <select
             value={this.props.sort}
             onChange={(e) =>
               this.props.sortProducts(this.props.products, e.target.value)
             }
           >
-            <option value="latest">Order: Latest Products</option>
+            <option value="latest">Latest Inventory</option>
             <option value="lowest">Price: Lowest to Highest</option>
             <option value="highest">Price: Highest to Lowest</option>
           </select>

@@ -6,6 +6,7 @@ import Modal from "react-modal";
 import { connect } from "react-redux";
 import { fetchProducts } from "../actions/productActions";
 import { addToCart } from "../actions/cartActions";
+import BeatLoader from "react-spinners/BeatLoader";
 
 class Products extends Component {
   constructor(props) {
@@ -32,7 +33,10 @@ class Products extends Component {
       <div>
         <Fade bottom cascade>
           {!this.props.products ? (
-            <div>Loading...</div>
+            <div className="loader">
+              {" "}
+              <BeatLoader size={15} margin={5} color={"green"} loading={true} />
+            </div>
           ) : (
             <ul className="products">
               {this.props.products.map((product) => (
@@ -64,13 +68,13 @@ class Products extends Component {
           <Modal isOpen={true} onRequetClose={this.closeModal}>
             <Zoom>
               <button className="close-modal" onClick={this.closeModal}>
-                x
+                X
               </button>
               <div className="product-details">
                 <img src={product.image} alt={product.title}></img>
                 <div className="product-details-description">
                   <p>
-                    <strong>{product.title}</strong>
+                    <h2>{product.title}</h2>
                   </p>
                   <p>{product.description}</p>
                   {/* <p>
@@ -84,16 +88,16 @@ class Products extends Component {
                   </p> */}
                   <div className="product-price">
                     <div>{formatCurrency(product.price)}</div>
+                    <button
+                      className="button-primary product-button"
+                      onClick={() => {
+                        this.props.addToCart(product);
+                        this.closeModal();
+                      }}
+                    >
+                      Add To Cart
+                    </button>
                   </div>
-                  <button
-                    className="button-primary product-button"
-                    onClick={() => {
-                      this.props.addToCart(product);
-                      this.closeModal();
-                    }}
-                  >
-                    Add To Cart
-                  </button>
                 </div>
               </div>
             </Zoom>

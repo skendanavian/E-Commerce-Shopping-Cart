@@ -6,16 +6,13 @@ import Zoom from "react-reveal/Zoom";
 import { connect } from "react-redux";
 import { removeFromCart } from "../actions/cartActions";
 import { createOrder, clearOrder } from "../actions/orderActions";
+import shoppingCart from "../images/shoppingCart.png";
 
 class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = { showCheckout: false, name: "", address: "", email: "" };
   }
-
-  // if(cartItems.length === 0){
-  //   this.setState(showCheckout: false)
-  // }
 
   handleCheckout = () => {
     this.setState({ showCheckout: true });
@@ -43,15 +40,11 @@ class Cart extends Component {
     const { cartItems, order } = this.props;
     return (
       <div>
-        {cartItems.length === 0 ? (
-          <div className="cart cart-header">Cart Is Empty</div>
-        ) : (
-          <div className="cart cart-header">
-            {cartItems.length === 1
-              ? `You have ${cartItems.length} item in the cart`
-              : `You have ${cartItems.length} items in the cart`}
-          </div>
-        )}
+        <div className="cart cart-header">
+          <img src={shoppingCart} alt="shopping cart"></img>
+          <div>Checkout</div>
+        </div>
+
         {order && (
           <Modal isOpen={true} onRequestClose={this.closeModal}>
             <Zoom>
@@ -97,10 +90,16 @@ class Cart extends Component {
             </Zoom>
           </Modal>
         )}
-
         <div>
           <div className="cart">
             <ul className="cart-items">
+              <div className="cart-count">
+                {cartItems.length === 1
+                  ? `You have ${cartItems.length} item in your cart`
+                  : cartItems.length === 0
+                  ? `Cart is empty`
+                  : `You have ${cartItems.length} items in your cart`}{" "}
+              </div>
               {cartItems.map((item) => (
                 <Fade left cascade>
                   <li key={item._id}>
@@ -113,7 +112,7 @@ class Cart extends Component {
                         {formatCurrency(item.price)} x {item.count}
                         {"  "}
                         <button
-                          className="button"
+                          className="button remove-button"
                           onClick={() => {
                             this.props.removeFromCart(item);
                             if (cartItems.length === 1) {
