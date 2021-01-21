@@ -7,7 +7,6 @@ import HomeScreen from "./screens/HomeScreen";
 import AdminScreen from "./screens/AdminScreen";
 import Auth0ProviderWithHistory from "./auth/auth0-provider-with-history";
 import AuthenticationButton from "./components/AuthenticationButton";
-import LoginButton from "./components/LoginButton";
 
 class App extends React.Component {
   render() {
@@ -29,10 +28,9 @@ class App extends React.Component {
               </main>
               <footer>
                 <div>
-                  {/* <AuthenticationButton> */}
-                  <Link to="/admin">Admin </Link>
-                  <LoginButton></LoginButton>
-                  {/* </AuthenticationButton> */}
+                  <AuthenticationButton>
+                    <Link to="/admin">Admin </Link>
+                  </AuthenticationButton>
                 </div>
                 <div> All Rights Reserved - 2020</div>
               </footer>
