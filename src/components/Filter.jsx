@@ -11,19 +11,19 @@ class Filter extends Component {
           {this.props.filteredProducts.length} Products
         </div>
         <div className="filter-sort">
-          Order{" "}
+          {/* Order{" "} */}
           <select
             value={this.props.sort}
             onChange={(e) =>
               this.props.sortProducts(this.props.products, e.target.value)
             }
           >
-            <option value="latest">Latest</option>
-            <option value="lowest">Lowest</option>
-            <option value="highest">Highest</option>
+            <option value="latest">Order: Latest Products</option>
+            <option value="lowest">Price: Lowest to Highest</option>
+            <option value="highest">Price: Highest to Lowest</option>
           </select>
         </div>
-        <div className="filter-size">
+        {/* <div className="filter-size">
           Filter{" "}
           <select
             value={this.props.size}
@@ -39,7 +39,7 @@ class Filter extends Component {
             <option value="XL">XL</option>
             <option value="XXL">XXL</option>
           </select>
-        </div>
+        </div> */}
       </div>
     );
   }

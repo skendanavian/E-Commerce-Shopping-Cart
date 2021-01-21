@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const shortid = require("shortid");
 
 const app = express();
+
 app.use(bodyParser.json());
 
 mongoose.connect("mongodb://localhost/react-shopping-cart-db", {

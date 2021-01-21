@@ -202,6 +202,10 @@ button:hover {
   border-right: 0.1rem #c0c0c0 solid;
 }
 
+.filter-sort {
+  text-align: end;
+}
+
 .filter div {
   flex: 1;
 }
@@ -291,6 +295,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   max-height: 96vh;
 }
 
@@ -308,6 +313,11 @@ input {
   flex: 1 1;
   margin: 1rem;
 }
+
+.product-button {
+  margin: 0.3rem;
+}
+
 .close-modal {
   position: absolute;
   right: 2.5rem;

@@ -73,7 +73,7 @@ class Products extends Component {
                     <strong>{product.title}</strong>
                   </p>
                   <p>{product.description}</p>
-                  <p>
+                  {/* <p>
                     Available Sizes:
                     {product.availableSizes.map((size) => (
                       <span>
@@ -81,20 +81,19 @@ class Products extends Component {
                         <button className="button">{size}</button>
                       </span>
                     ))}
-                  </p>
+                  </p> */}
                   <div className="product-price">
                     <div>{formatCurrency(product.price)}</div>
-
-                    <button
-                      className="button-primary"
-                      onClick={() => {
-                        this.props.addToCart(product);
-                        this.closeModal();
-                      }}
-                    >
-                      Add To Cart
-                    </button>
                   </div>
+                  <button
+                    className="button-primary product-button"
+                    onClick={() => {
+                      this.props.addToCart(product);
+                      this.closeModal();
+                    }}
+                  >
+                    Add To Cart
+                  </button>
                 </div>
               </div>
             </Zoom>

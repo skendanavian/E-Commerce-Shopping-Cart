@@ -13,6 +13,14 @@ class Cart extends Component {
     this.state = { showCheckout: false, name: "", address: "", email: "" };
   }
 
+  // if(cartItems.length === 0){
+  //   this.setState(showCheckout: false)
+  // }
+
+  handleCheckout = () => {
+    this.setState({ showCheckout: true });
+  };
+
   handleInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -106,7 +114,12 @@ class Cart extends Component {
                         {"  "}
                         <button
                           className="button"
-                          onClick={() => this.props.removeFromCart(item)}
+                          onClick={() => {
+                            this.props.removeFromCart(item);
+                            if (cartItems.length === 1) {
+                              this.setState({ showCheckout: false });
+                            }
+                          }}
                         >
                           Remove
                         </button>
@@ -117,23 +130,26 @@ class Cart extends Component {
               ))}
             </ul>
           </div>
-          <div className="cart">
-            <div className="total">
-              <div>
-                Total:{" "}
-                {formatCurrency(
-                  cartItems.reduce((a, c) => a + c.price * c.count, 0)
-                )}
+
+          {cartItems.length !== 0 && (
+            <div className="cart">
+              <div className="total">
+                <div>
+                  Total:{" "}
+                  {formatCurrency(
+                    cartItems.reduce((a, c) => a + c.price * c.count, 0)
+                  )}
+                </div>
+                <button
+                  onClick={() => this.handleCheckout()}
+                  className="button button-primary"
+                >
+                  Proceed
+                </button>
               </div>
-              <button
-                onClick={() => this.setState({ showCheckout: true })}
-                className="button button-primary"
-              >
-                Proceed
-              </button>
             </div>
-          </div>
-          {this.state.showCheckout && (
+          )}
+          {this.state.showCheckout && cartItems.length !== 0 && (
             <Fade right cascade>
               <div className="cart">
                 <form onSubmit={this.createOrder}>
