@@ -1,6 +1,7 @@
 import { CLEAR_CART, CREATE_ORDER, CLEAR_ORDER, FETCH_ORDERS } from "../types";
 
 export const createOrder = (order) => (dispatch) => {
+  console.log(order);
   fetch("/api/orders", {
     method: "POST",
     headers: {

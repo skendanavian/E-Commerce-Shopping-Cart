@@ -314,11 +314,11 @@ form {
 .form-container li {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 input {
-  padding: 1rem;
+  padding: 0.5rem;
   border: 0.1rem #c0c0c0 solid;
 }
 
@@ -385,7 +385,7 @@ body > div.ReactModalPortal > div > div {
 }
 
 .order-details .items {
-  text-align: right;
+  text-align: left;
   padding: 0;
 }
 .success-message {

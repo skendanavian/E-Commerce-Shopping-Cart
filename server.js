@@ -50,8 +50,11 @@ const Order = mongoose.model(
         default: shortid.generate,
       },
       email: String,
-      name: String,
+      firstName: String,
+      lastName: String,
       address: String,
+      postalCode: String,
+      country: String,
       total: Number,
       cartItems: [
         {
@@ -69,10 +72,14 @@ const Order = mongoose.model(
 );
 
 app.post("/api/orders", async (req, res) => {
+  console.log(res.body);
   if (
-    !req.body.name ||
+    !req.body.firstName ||
+    !req.body.lastName ||
     !req.body.email ||
     !req.body.address ||
+    !req.body.postalCode ||
+    !req.body.country ||
     !req.body.total ||
     !req.body.cartItems
   ) {
@@ -89,6 +96,8 @@ app.get("/api/orders", async (req, res) => {
 
 app.delete("/api/orders/:id", async (req, res) => {
   const order = await Order.findByIdAndDelete(req.params.id);
+  // swap out to clear DB
+  // const order = await Order.deleteMany({});
   res.send(order);
 });
 

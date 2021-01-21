@@ -11,7 +11,15 @@ import shoppingCart from "../images/shoppingCart.png";
 class Cart extends Component {
   constructor(props) {
     super(props);
-    this.state = { showCheckout: false, name: "", address: "", email: "" };
+    this.state = {
+      showCheckout: false,
+      firstName: "",
+      lastName: "",
+      address: "",
+      postalCode: "",
+      country: "",
+      email: "",
+    };
   }
 
   handleCheckout = () => {
@@ -19,15 +27,18 @@ class Cart extends Component {
   };
 
   handleInput = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value.toString() });
   };
 
   createOrder = (e) => {
     e.preventDefault();
     const order = {
-      name: this.state.name,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
       email: this.state.email,
       address: this.state.address,
+      postalCode: this.state.postalCode,
+      country: this.state.country,
       cartItems: this.props.cartItems,
       total: this.props.cartItems.reduce((a, c) => a + c.price * c.count, 0),
     };
@@ -49,7 +60,7 @@ class Cart extends Component {
           <Modal isOpen={true} onRequestClose={this.closeModal}>
             <Zoom>
               <button className="close-modal" onClick={this.closeModal}>
-                x
+                X
               </button>
               <div className="order-details">
                 <h3 className="success-message">Your Order Has Been Placed!</h3>
@@ -57,7 +68,9 @@ class Cart extends Component {
                 <ul>
                   <li>
                     <div>Name:</div>
-                    <div>{order.name}</div>
+                    <div>
+                      {order.firstName} {order.lastName}
+                    </div>
                   </li>
                   <li>
                     <div>Email:</div>
@@ -65,14 +78,13 @@ class Cart extends Component {
                   </li>
                   <li>
                     <div>Address:</div>
-                    <div>{order.address}</div>
+                    <div>
+                      {order.address} <br /> {order.postalCode} <br />{" "}
+                      {order.country}
+                    </div>
                   </li>
                   <li>
-                    <div>Created:</div>
-                    <div>{order.createdAt}</div>
-                  </li>
-                  <li>
-                    <div>Total:</div>
+                    <div>Total Cost:</div>
                     <div>{formatCurrency(order.total)}</div>
                   </li>
                   <li>
@@ -163,20 +175,48 @@ class Cart extends Component {
                       ></input>
                     </li>
                     <li>
-                      <label>Name</label>
+                      <label>First Name</label>
                       <input
-                        name="name"
+                        name="firstName"
                         type="text"
                         required
                         onChange={this.handleInput}
                       ></input>
                     </li>
                     <li>
-                      <label>Address</label>
+                      <label>Last Name</label>
+                      <input
+                        name="lastName"
+                        type="text"
+                        required
+                        onChange={this.handleInput}
+                      ></input>
+                    </li>
+                    <li>
+                      <label>Shipping Address</label>
                       <input
                         name="address"
                         type="text"
                         required
+                        onChange={this.handleInput}
+                        required
+                      ></input>
+                    </li>
+                    <li>
+                      <label>Postal Code</label>
+                      <input
+                        name="postalCode"
+                        type="text"
+                        maxlength="7"
+                        required
+                        onChange={this.handleInput}
+                      ></input>
+                    </li>
+                    <li>
+                      <label>Country</label>
+                      <input
+                        name="country"
+                        type="text"
                         onChange={this.handleInput}
                       ></input>
                     </li>

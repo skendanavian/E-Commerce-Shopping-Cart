@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import React, { Component } from "react";
 import { fetchOrders } from "../actions/orderActions";
 import formatCurrency from "../util";
+import BeatLoader from "react-spinners/BeatLoader";
 
 class Orders extends Component {
   componentDidMount() {
@@ -11,7 +12,10 @@ class Orders extends Component {
   render() {
     const { orders } = this.props;
     return !orders ? (
-      <div>...Loading</div>
+      <div className="loader">
+        {" "}
+        <BeatLoader size={15} margin={5} color={"green"} loading={true} />
+      </div>
     ) : (
       <div className="orders">
         <h2>Orders</h2>
@@ -24,7 +28,7 @@ class Orders extends Component {
               <th>TOTAL</th>
               <th>NAME</th>
               <th>EMAIL</th>
-              <th>ADDRESS</th>
+              <th>SHIPPING ADDRESS</th>
               <th>ITEMS</th>
             </tr>
           </thead>
@@ -35,9 +39,13 @@ class Orders extends Component {
                 <td>{order._id}</td>
                 <td>{order.createdAt}</td>
                 <td>{formatCurrency(order.total)}</td>
-                <td>{order.name}</td>
+                <td>
+                  {order.firstName} {order.lastName}
+                </td>
                 <td>{order.email}</td>
-                <td>{order.address}</td>
+                <td>
+                  {order.address}, {order.postalCode}, {order.country}
+                </td>
                 <td>
                   {order.cartItems.map((item) => (
                     <div>
