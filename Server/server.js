@@ -7,8 +7,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use("/", express.static(__dirname + "./Client/build"));
-app.get("/", (req, res) => res.sendFile(__dirname + "build/index.html"));
+app.use("/", express.static("../Client/build"));
+app.get("/", (req, res) => res.sendFile("../Client/build/index.html"));
 
 mongoose.connect(
   process.env.MONGODB_URL || "mongodb://localhost/react-shopping-cart-db",
