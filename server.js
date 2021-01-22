@@ -8,13 +8,16 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use("/", express.static("../Client/build"));
-app.get("/", (req, res) => res.sendFile("../Client/build/index.html"));
+app.get("/", (req, res) => res.sendFile("./Client/build/index.html"));
 
-mongoose.connect("mongodb://localhost/react-shopping-cart-db", {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URL || "mongodb://localhost/react-shopping-cart-db",
+  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const Product = mongoose.model(
   "products",
