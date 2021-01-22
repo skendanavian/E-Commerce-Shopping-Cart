@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
   return (
-    <button onClick={() => loginWithRedirect("http://localhost:3000/admin")}>
+    <button onClick={() => loginWithRedirect()}>
       <Link to="/admin">Admin Login</Link>
     </button>
   );

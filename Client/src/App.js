@@ -45,7 +45,7 @@ class App extends React.Component {
                 <Link to="/admin">Admin </Link>
               </AuthenticationButton>
             </div>
-            <div> All Rights Reserved - 2020</div>
+            {/* <div> All Rights Reserved - 2020</div> */}
           </footer>
         </div>
         {/* </Auth0ProviderWithHistory>
