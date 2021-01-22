@@ -7,6 +7,9 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.use("/", express.static("../Client/build"));
+app.get("/", (req, res) => res.sendFile("../Client/build/index.html"));
+
 mongoose.connect("mongodb://localhost/react-shopping-cart-db", {
   useNewUrlParser: true,
   useCreateIndex: true,
