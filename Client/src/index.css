@@ -79,12 +79,13 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
-/* #root > div > footer > div:nth-child(1) > button {
-  margin-top: 0.8rem;
-} */
+footer button {
+  background-color: transparent;
+  color: white;
+}
 
 footer > div {
   color: white;
@@ -138,7 +139,6 @@ footer > div:nth-child(1) > a:hover {
   height: 100%;
   margin: 2rem;
   background-color: white;
-  /* border: 0.1rem solid #c0c0c0; */
   border-radius: 0.5rem;
   box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.189);
   padding: 1rem;
@@ -158,7 +158,6 @@ footer > div:nth-child(1) > a:hover {
 }
 
 .product a:hover {
-  /* transform: scale(1.008); */
   color: rgba(24, 23, 113, 0.846);
 }
 
@@ -181,7 +180,6 @@ footer > div:nth-child(1) > a:hover {
 button {
   padding: 0.7rem;
   border: none;
-  /* border: 0.1rem #c0c0c0 solid; */
   border-radius: 0.5rem;
   font-size: 1.3rem;
 }
@@ -189,11 +187,9 @@ button {
 button:hover {
   cursor: pointer;
   opacity: 0.9;
-  /* border: 0.1rem #888 solid; */
 }
 
 .button-primary {
-  /* background-color: #f0c040; */
   background-color: rgb(30, 168, 77);
   color: white;
 }
@@ -204,7 +200,6 @@ button:hover {
 }
 
 #root > div > main > div > div.main > div:nth-child(2) > ul {
-  /* border-right: 0.1rem solid #c0c0c0; */
 }
 
 /* Filter Component */
@@ -213,10 +208,8 @@ button:hover {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  /* margin: 1rem; */
   background-color: rgb(246, 246, 246);
   border-bottom: 0.1rem #c0c0c0 solid;
-  /* border-right: 0.1rem #c0c0c0 solid; */
 }
 
 .filter-sort {
@@ -234,7 +227,6 @@ button:hover {
 }
 
 .cart {
-  /* padding: 1.2rem; */
   margin: 1rem;
   display: flex;
   justify-content: center;
@@ -246,7 +238,6 @@ button:hover {
   font-weight: 400;
   border-bottom: 0.1rem #c0c0c0 solid;
   background-color: rgb(246, 246, 246);
-  /* background-color: goldenrod; */
   margin: 0;
   text-align: center;
   justify-content: center;
@@ -423,5 +414,5 @@ td {
 }
 
 th {
-  text-align: left;
+  text-align: center;
 }

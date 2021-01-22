@@ -199,7 +199,6 @@ class Cart extends Component {
                         type="text"
                         required
                         onChange={this.handleInput}
-                        required
                       ></input>
                     </li>
                     <li>
@@ -218,6 +217,7 @@ class Cart extends Component {
                         name="country"
                         type="text"
                         onChange={this.handleInput}
+                        required
                       ></input>
                     </li>
                     <li>
