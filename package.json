@@ -1,5 +1,6 @@
 {
   "name": "react-shopping-cart",
+<<<<<<< HEAD
   "version": "1.0.0",
   "description": "### Built with React, Redux, MongoDB",
   "main": "index.js",
@@ -17,6 +18,59 @@
     "url": "https://github.com/skendanavian/E-Commerce-Shopping-Cart/issues"
   },
   "homepage": "https://github.com/skendanavian/E-Commerce-Shopping-Cart#readme",
+=======
+  "proxy": "http://localhost:5000",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-react": "^1.2.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.12",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.12.1",
+    "react-redux": "^7.2.2",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-spinners": "^0.10.4",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "shortid": "^2.2.16",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+>>>>>>> deploy-heroku
   "engines": {
     "node": "12.4.0",
     "npm": "6.9.0"
