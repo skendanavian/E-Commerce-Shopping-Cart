@@ -79,7 +79,6 @@ const Order = mongoose.model(
 );
 
 app.post("/api/orders", async (req, res) => {
-  console.log(res.body);
   if (
     !req.body.firstName ||
     !req.body.lastName ||

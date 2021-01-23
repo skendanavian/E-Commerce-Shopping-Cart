@@ -6,9 +6,9 @@ import BeatLoader from "react-spinners/BeatLoader";
 class Filter extends Component {
   render() {
     return !this.props.filteredProducts ? (
-      <div className="loader">
-        {" "}
-        <BeatLoader size={15} margin={5} color={"green"} loading={true} />
+      <div>
+        {/* {" "}
+        <BeatLoader size={15} margin={5} color={"green"} loading={true} /> */}
       </div>
     ) : (
       <div className="filter">
