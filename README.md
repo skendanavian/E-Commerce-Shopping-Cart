@@ -12,9 +12,9 @@
 
 ## React Mountain Sports - E-Commerce App
 
-- <h5 style="color: #b0965a">Online store with filter, checkout, persistent database and admin authentication to view orders. Deployed on Heroku.</h5>
+- <h5 style="color: #b0965a">Online store with filter, checkout, persistent database and admin authentication to view orders. Deployed on Heroku with a cloud MongoDB.</h5>
 - <h5 style="color: #b0965a">Front-end built with React, Redux, React-Router, Auth0 API.</h5>
-- <h5 style="color: #b0965a">Back-end built with Node, Express, a MongoDB database.</h5>
+- <h5 style="color: #b0965a">Back-end built with Node, Express, and MongoDB. Products and Orders accessed on front-end via  REST API routes.</h5>
 
 <h2 style="text-align: center"> Check out the deployed version <a href="https://react-mountain-sports-test.herokuapp.com/">HERE</a></h2>
 
@@ -24,58 +24,59 @@
 - <h5 style="color: #b0965a">Cart: Shows items, count and total cost</h5>
 - <h5 style="color: #b0965a">Checkout: submits user/order info into the DB and adds to the admin orders page.</h5>
 - <h5 style="color: #b0965a">Admin Page: requires user authentication using Auth0. Access the admin page via the footer sign in. The Heroku login credentials to see the order page are: <br/>
-  email: 
-  admin@example.com // password: admin-12345
-  </h5>
+    email: 
+    admin@example.com // password: admin-12345
+    </h5>
 
   ## Final Product
 
-      <p align='center'>Home (No search Items or Nominees)</p>
-      <p align="center">
-        <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/home.png?raw=true" >
+     <p align='center'>Home Page - Products</p>
+  <p align="center">
+  <img src="https://github.com/skendanavian/E-Commerce-Shopping-Cart/blob/master/docs/cart.png?raw=true" >
+  </p>
+  <p align='center'>Individual Product</p>
+  <p align="center">
+  <img src="https://github.com/skendanavian/E-Commerce-Shopping-Cart/blob/master/docs/product.png?raw=true" >
+  </p>
+  </p>
+  <p align='center'>Checkout Panel</p>
+  <p align="center">
+  <img src="https://github.com/skendanavian/E-Commerce-Shopping-Cart/blob/master/docs/checkout.png?raw=true">
+  </p>
+  <p align='center'>Order Receipt</p>
+  <p align="center">
+  <img src="https://github.com/skendanavian/E-Commerce-Shopping-Cart/blob/master/docs/orderConfirmation.png?raw=true" >
+  </p>
+  <p align='center'>Admin Login - Auth0</p>
+  <p align="center">
+  <img src="https://github.com/skendanavian/E-Commerce-Shopping-Cart/blob/master/docs/adminLogin.png?raw=true" >
+  </p>
+  <p align='center'>Orders Admin Page</p>
+  <p align="center">
+  <img src="https://github.com/skendanavian/E-Commerce-Shopping-Cart/blob/master/docs/adminOrders.png?raw=true" >
+  </p>
 
-      </p>
+## Project Goals and Challenges
 
-    </p>
-      <p align='center'>Home (With Search Items and  5 Nominees)</p>
-       <p align="center">
-        <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/homeSearch.png?raw=true" >
-      
-      </p>
-
-    </p>
-      <p align='center'>Submission Animation Page</p>
-      <p align="center">
-        <img src="https://github.com/skendanavian/shopify-intern-challenge-2021/blob/main/docs/submission.png?raw=true" >
-       
-      </p>
-    </p>
-
-  ## Design and Development
-
-- <h5 style="color: #b0965a">My goal with this project was to create both a modern and simple UI that reflects the elegance and prestige of a movie award event like the Academy Awards. I wanted it to grab the attention of the user while remaining highly accessible.</h5>
-
-- <h5 style="color: #b0965a">The colors, fonts, text/border shadow, and animations all add to the award nomination experience.</h5>
-
-- <h5 style="color: #b0965a">I wanted the app to be highly functional and fully responsive and placed a large focus on making that happen. The applications makes sure that users can not add more than 5 movie nominations, and also checks all search items agains the nominee list to disable buttons if the title and the year are a match.</h5>
+- <h5 style="color: #b0965a">Building this app was a great introduction to Redux, React Router, and MongoDB which were all brand new to me. I also hadn't had much experience with class-based components in react and even though I much prefer hooks/functional components, this was a good chance to get some practice with them before potentially working on a class-based legacy project in the future. This was also my first time using Auth0.</h5>
 
   ## Some Future Goals and Improvements
 
-- <h5 style="color: #b0965a">There are a lot more features that I would like to eventually add to the project. Here are a few of them.</h5>
+- <h5 style="color: #b0965a">There are a lot more features that I would like to add. Here are a few of them.</h5>
 
-- <h5 style="color: #b0965a">1. Email Form to send users their nominee lists and implement back end to persist data in a server side DB.</h5>
-- <h5 style="color: #b0965a">2. A popup on page load which explains the awards, nomination process and how the site works.</h5>
-- <h5 style="color: #b0965a">3. Show Movie Posters and additional information than the title and year. The API offers alot of info and it would be nice to utilize more of it. </h5>
-- <h5 style="color: #b0965a">4. Show more than 5 search items at a time. Again, this means a layout change to handle the larger amount of content. </h5>
+- <h5 style="color: #b0965a">1. Functional payment using Stripe at checkout. </h5>
+- <h5 style="color: #b0965a">2. A product search bar.</h5>
+- <h5 style="color: #b0965a">3. Forms and Buttons in the admin area to add/delete/update products and orders through the UI rather than using Postman. </h5>
+- <h5 style="color: #b0965a">4. Convert to functional components/hooks for practice </h5>
+- <h5 style="color: #b0965a">5. Send confirmation email to the customer after checkout. </h5>
 
 ### Getting Things Running
 
 - Fork and Clone the Repository
 - Run <code>npm install</code>
 
-In the project directory, you can run:
+In the project directory, run:
 
-### `npm start`
+### `npm start` - React Client - localhost:3000
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `npm run server` Node Server - localhost:5000

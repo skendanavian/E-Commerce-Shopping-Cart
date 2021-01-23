@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { filterProducts, sortProducts } from "../actions/productActions";
-import BeatLoader from "react-spinners/BeatLoader";
 
 class Filter extends Component {
   render() {
     return !this.props.filteredProducts ? (
-      <div>
-        {/* {" "}
-        <BeatLoader size={15} margin={5} color={"green"} loading={true} /> */}
-      </div>
+      <div></div>
     ) : (
       <div className="filter">
         <div className="filter-result">

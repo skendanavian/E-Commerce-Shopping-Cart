@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import React, { Component } from "react";
 import { fetchOrders } from "../actions/orderActions";
 import formatCurrency from "../util";
-import BeatLoader from "react-spinners/BeatLoader";
 
 class Orders extends Component {
   componentDidMount() {
@@ -12,10 +11,7 @@ class Orders extends Component {
   render() {
     const { orders } = this.props;
     return !orders ? (
-      <div>
-        {/* {" "}
-        <BeatLoader size={15} margin={5} color={"green"} loading={true} /> */}
-      </div>
+      <div></div>
     ) : (
       <div className="orders">
         <h2>Orders</h2>
