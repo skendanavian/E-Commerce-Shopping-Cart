@@ -1,15 +1,3 @@
-## E-Commerce Shopping Cart
-
-### Built with React, Redux, MongoDB, Auth0 API, React Router
-
-#### Running DB Locally > brew services start mongodb-community
-
-#### Start Server > npm run server
-
-#### Run Frontend > npm start
-
-# The Shoppies - Movie Award Nomination App
-
 ## React Mountain Sports - E-Commerce App
 
 - <h5 style="color: #b0965a">Online store with filter, checkout, persistent database and admin authentication to view orders. Deployed on Heroku with a cloud MongoDB.</h5>
@@ -80,3 +68,5 @@ In the project directory, run:
 ### `npm start` - React Client - localhost:3000
 
 ### `npm run server` Node Server - localhost:5000
+
+#### Running Mongo DB Locally - install community MongoDB > brew services start mongodb-community
