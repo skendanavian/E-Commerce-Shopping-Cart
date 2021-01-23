@@ -1,6 +1,6 @@
 ## E-Commerce Shopping Cart
 
-### Built with React, Redux, MongoDB
+### Built with React, Redux, MongoDB, Auth0 API, React Router
 
 #### Running DB Locally > brew services start mongodb-community
 
